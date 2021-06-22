@@ -59,7 +59,7 @@ export const addPlanesReducer = (state = { planes: {} }, action) => {
   }
 };
 
-export const getPlaneDetailsReducer = (state = { planes: {} }, action) => {
+export const getPlaneDetailsReducer = (state = { plane: {} }, action) => {
   switch (action.type) {
     case actionTypes.GET_PLANE_DETAILS_REQUEST:
       return {
@@ -68,7 +68,7 @@ export const getPlaneDetailsReducer = (state = { planes: {} }, action) => {
     case actionTypes.GET_PLANE_DETAILS_SUCCESS:
       return {
         loading: false,
-        planes: action.payload,
+        plane: action.payload,
       };
     case actionTypes.GET_PLANE_DETAILS_FAIL:
       return {
@@ -77,7 +77,7 @@ export const getPlaneDetailsReducer = (state = { planes: {} }, action) => {
       };
     case actionTypes.GET_PLANE_DETAILS_RESET:
       return {
-        planes: {},
+        plane: {},
       };
     default:
       return state;

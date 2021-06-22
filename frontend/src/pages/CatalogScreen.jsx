@@ -25,7 +25,7 @@ const CatalogScreen = () => {
 
     return (
         <div className="homescreen">
-            <h2 className="homescreen__title">Каталог шедевров</h2>
+            <h2 className="homescreen__title">Каталог самолетов</h2>
             {/*<div className="header__wrapper">*/}
             {/*    <div className="info__button" onClick={() => setSorting(1)}>Сначала дешевые</div>*/}
             {/*    <div className="info__button" onClick={() => setSorting(-1)}>Сначала дорогие</div>*/}

@@ -1,6 +1,6 @@
 import "./Product.css";
 import {Link} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {removeFromCatalog} from "../redux/actions/planeActions";
 
 const Plane = ({imageUrl, description, name, productId}) => {
@@ -11,10 +11,10 @@ const Plane = ({imageUrl, description, name, productId}) => {
     }
 
     return (
-        <div className="product">
+        <div className="plane">
             <img src={imageUrl} alt={name}/>
 
-            <div className="product__info">
+            <div className="plane__info">
                 <p className="info__name">{name}</p>
 
                 <p className="info__description">{description.substring(0, 100)}...</p>
@@ -22,9 +22,8 @@ const Plane = ({imageUrl, description, name, productId}) => {
                 <Link to={`/planes/${productId}`} className="info__button">
                     Подробнее
                 </Link>
-
-                <div className="info__button" onClick={() => onRemoveFromCatalog(productId)}>Удалить из каталога</div>
             </div>
+            <div className="remove" onClick={() => onRemoveFromCatalog(productId)}>&times;</div>
         </div>
     );
 };

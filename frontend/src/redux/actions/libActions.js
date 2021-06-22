@@ -14,7 +14,7 @@ export const addToLib = (id, qty) => async (dispatch, getState) => {
     },
   });
 
-  localStorage.setItem("lib", JSON.stringify(getState().cart.cartItems));
+  localStorage.setItem("lib", JSON.stringify(getState().lib.libItems));
 };
 
 export const removeFromLib = (id) => (dispatch, getState) => {
@@ -23,7 +23,7 @@ export const removeFromLib = (id) => (dispatch, getState) => {
     payload: id,
   });
 
-  localStorage.setItem("lib", JSON.stringify(getState().cart.cartItems));
+  localStorage.setItem("lib", JSON.stringify(getState().lib.libItems));
 };
 
 export const removeAllFromLib = () => (dispatch, getState) => {
@@ -31,7 +31,7 @@ export const removeAllFromLib = () => (dispatch, getState) => {
     type: actionTypes.REMOVE_ALL_FROM_LIB
   });
 
-  localStorage.setItem("lib", JSON.stringify(getState().cart.cartItems));
+  localStorage.setItem("lib", JSON.stringify(getState().lib.libItems));
 };
 
 

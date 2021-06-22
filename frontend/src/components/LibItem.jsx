@@ -7,12 +7,12 @@ const LibItem = ({ item, qtyChangeHandler, removeHandler }) => {
       <div className="cartitem__image">
         <img src={item.imageUrl} alt={item.name} />
       </div>
-      <Link to={`/product/${item.product}`} className="cartItem__name">
+      <Link to={`/planes/${item.plane}`} className="cartItem__name">
         <p>{item.name}</p>
       </Link>
       <button
         className="cartItem__deleteBtn"
-        onClick={() => removeHandler(item.product)}
+        onClick={() => removeHandler(item.plane)}
       >
         <i className="fas fa-trash"></i>
       </button>

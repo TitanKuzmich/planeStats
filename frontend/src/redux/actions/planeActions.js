@@ -65,7 +65,7 @@ export const filterPlanes = (sortType) => async (dispatch) => {
   }
 };
 
-export const getPlanesDetails = (id) => async (dispatch) => {
+export const getPlaneDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: actionTypes.GET_PLANE_DETAILS_REQUEST });
 

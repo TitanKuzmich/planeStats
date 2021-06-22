@@ -1,5 +1,5 @@
 import "./ProductScreen.css";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 // Actions
@@ -7,11 +7,10 @@ import { getPlaneDetails } from "../redux/actions/planeActions";
 import { addToLib } from "../redux/actions/libActions";
 
 const PlaneScreen = ({ match, history }) => {
-  const [qty, setQty] = useState(1);
   const dispatch = useDispatch();
 
-  const getPlaneDetails = useSelector((state) => state.getPlaneDetails);
-  const { loading, error, plane } = getPlaneDetails;
+  const planeDetails = useSelector((state) => state.getPlaneDetails);
+  const { loading, error, plane } = planeDetails;
 
   useEffect(() => {
     if (plane && match.params.id !== plane._id) {
@@ -19,12 +18,8 @@ const PlaneScreen = ({ match, history }) => {
     }
   }, [dispatch, match, plane]);
 
-  useEffect(() => {
-    dispatch(getPlaneDetails(match.params.id));
-  }, []);
-
   const addToCartHandler = () => {
-    dispatch(addToLib(plane._id, qty));
+    dispatch(addToLib(plane._id, 1));
     history.push(`/lib`);
   };
 
