@@ -1,9 +1,9 @@
-const Product = require("../models/Plane");
+const Plane = require("../models/Plane");
 
 const getPlanes = async (req, res) => {
   try {
-    const products = await Product.find({});
-    res.json(products);
+    const planes = await Plane.find({});
+    res.json(planes);
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Server Error" });
@@ -14,8 +14,8 @@ const sortPlanes = async (req, res) => {
   try {
     const {sortType, field} = req.params
 
-    const products = await Product.find({}, {"sort": [`${field}`, sortType]})
-    res.json(products);
+    const planes = await Plane.find({}, {"sort": [`${field}`, sortType]})
+    res.json(planes);
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Server Error" });
@@ -24,9 +24,10 @@ const sortPlanes = async (req, res) => {
 
 const getPlaneById = async (req, res) => {
   try {
-    const product = await Product.findById(req.params.id);
+    const plane = await Plane.findById(req.params.id);
 
-    res.json(product);
+    console.log(plane)
+    res.json(plane);
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Server Error" });
@@ -35,10 +36,10 @@ const getPlaneById = async (req, res) => {
 
 const removePlaneById = async (req, res) => {
   try {
-    await Product.findByIdAndDelete(req.params.id);
+    await Plane.findByIdAndDelete(req.params.id);
 
-    const products = await Product.find({});
-    res.json(products);
+    const planes = await Plane.find({});
+    res.json(planes);
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Server Error" });
@@ -48,11 +49,11 @@ const removePlaneById = async (req, res) => {
 const addPlane= async (req, res) => {
   try {
     const {name, description, price, countInStock, imageUrl} = req.body;
-    const product = new Product({name, description, price, countInStock, imageUrl});
+    const plane = new Plane({name, description, price, countInStock, imageUrl});
 
-    await product.save();
+    await plane.save();
 
-    res.status(200).json(product);
+    res.status(200).json(plane);
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Server Error" });
@@ -61,7 +62,7 @@ const addPlane= async (req, res) => {
 
 const deletePlanes = async (req, res) => {
   try {
-    await Product.deleteMany({});
+    await Plane.deleteMany({});
 
     res.status(200).json({message: "Оплата прошла успешно!"});
   } catch (error) {

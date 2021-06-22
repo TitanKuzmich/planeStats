@@ -1,9 +1,9 @@
 import "./Product.css";
 import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {removeFromCatalog} from "../redux/actions/productActions";
+import {removeFromCatalog} from "../redux/actions/planeActions";
 
-const Product = ({imageUrl, description, price, name, productId}) => {
+const Plane = ({imageUrl, description, name, productId}) => {
 
     const dispatch = useDispatch();
     const onRemoveFromCatalog = (id) => {
@@ -19,10 +19,8 @@ const Product = ({imageUrl, description, price, name, productId}) => {
 
                 <p className="info__description">{description.substring(0, 100)}...</p>
 
-                <p className="info__price">${price}</p>
-
-                <Link to={`/product/${productId}`} className="info__button">
-                    Просмотр
+                <Link to={`/planes/${productId}`} className="info__button">
+                    Подробнее
                 </Link>
 
                 <div className="info__button" onClick={() => onRemoveFromCatalog(productId)}>Удалить из каталога</div>
@@ -31,4 +29,4 @@ const Product = ({imageUrl, description, price, name, productId}) => {
     );
 };
 
-export default Product;
+export default Plane;

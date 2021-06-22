@@ -7,9 +7,9 @@ import Navbar from "./components/Navbar";
 import SideDrawer from "./components/SideDrawer";
 import Backdrop from "./components/Backdrop";
 // Screens
-import HomeScreen from "./screens/HomeScreen";
-import ProductScreen from "./screens/ProductScreen";
-import CartScreen from "./screens/CartScreen";
+import CatalogScreen from "./screens/CatalogScreen";
+import PlaneScreen from "./screens/PlaneScreen";
+import LibScreen from "./screens/LibScreen";
 
 function App() {
   const [sideToggle, setSideToggle] = useState(false);
@@ -21,9 +21,9 @@ function App() {
       <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
       <main className="app">
         <Switch>
-          <Route exact path="/" component={HomeScreen} />
-          <Route exact path="/product/:id" component={ProductScreen} />
-          <Route exact path="/cart" component={CartScreen} />
+          <Route exact path="/" component={CatalogScreen} />
+          <Route exact path="/planes/:id" component={PlaneScreen} />
+          <Route exact path="/lib" component={LibScreen} />
         </Switch>
       </main>
     </Router>

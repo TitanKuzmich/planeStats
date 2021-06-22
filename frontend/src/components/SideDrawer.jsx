@@ -5,11 +5,11 @@ import { useSelector } from "react-redux";
 const SideDrawer = ({ show, click }) => {
   const sideDrawerClass = ["sidedrawer"];
 
-  const cart = useSelector((state) => state.cart);
-  const { cartItems } = cart;
+  const lib = useSelector((state) => state.lib);
+  const { libItems } = lib;
 
-  const getCartCount = () => {
-    return cartItems.reduce((qty, item) => Number(item.qty) + qty, 0);
+  const getLibCount = () => {
+    return libItems.reduce((qty, item) => Number(item.qty) + qty, 0);
   };
 
   if (show) {
@@ -20,11 +20,11 @@ const SideDrawer = ({ show, click }) => {
     <div className={sideDrawerClass.join(" ")}>
       <ul className="sidedrawer__links" onClick={click}>
         <li>
-          <Link to="/cart">
+          <Link to="/lib">
             <i className="fas fa-shopping-cart"></i>
             <span>
-              Корзина{" "}
-              <span className="sidedrawer__cartbadge">{getCartCount()}</span>
+              Ваша библиотека{" "}
+              <span className="sidedrawer__cartbadge">{getLibCount()}</span>
             </span>
           </Link>
         </li>

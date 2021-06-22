@@ -3,29 +3,29 @@ import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 
 // Reducers
-import { cartReducer } from "./reducers/cartReducers";
+import { libReducer } from "./reducers/libReducers";
 import {
-  getProductsReducer,
-  getProductDetailsReducer,
-  addProductsReducer
-} from "./reducers/productReducers";
+  getPlanesReducer,
+  getPlaneDetailsReducer,
+  addPlanesReducer
+} from "./reducers/planeReducers";
 
 const reducer = combineReducers({
-  cart: cartReducer,
-  getProducts: getProductsReducer,
-  getProductDetails: getProductDetailsReducer,
-  addProduct: addProductsReducer,
+  lib: libReducer,
+  getPlanes: getPlanesReducer,
+  getPlaneDetails: getPlaneDetailsReducer,
+  addPlane: addPlanesReducer,
 });
 
 const middleware = [thunk];
 
-const cartItemsInLocalStorage = localStorage.getItem("cart")
-  ? JSON.parse(localStorage.getItem("cart"))
+const planeItemsInLocalStorage = localStorage.getItem("lib")
+  ? JSON.parse(localStorage.getItem("lib"))
   : [];
 
 const INITIAL_STATE = {
-  cart: {
-    cartItems: cartItemsInLocalStorage,
+  lib: {
+    libItems: planeItemsInLocalStorage,
   },
 };
 
