@@ -1,0 +1,56 @@
+.wrapper{
+    position: fixed;
+    bottom: -55%;
+    right: 10%;
+    width: 360px;
+    height: 600px;
+    color: #f4f4f4;
+    padding: 30px 25px;
+    background-color: rgb(83, 116, 199);
+    border: 1px solid #f4f4f4;
+    border-radius: 8px;
+    transition: all .3s ease-in-out;
+}
+
+.show__popup{
+    bottom: 0;
+}
+
+.add__fixed__btn{
+    position: fixed;
+    bottom: 5px;
+    right: 10%;
+}
+
+.info__area{
+    display: flex;
+    flex-direction: column;
+}
+
+.input__area{
+    margin: 20px 0;
+}
+
+.input__area:first-child{
+    margin-top: 0;
+}
+
+.info__area__name{
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.add__area__input{
+    width: 100%;
+    font-size: 22px;
+    padding: 10px 15px;
+    color: #f4f4f4;
+    background-color: transparent;
+    border: 1px solid #f4f4f4;
+    border-radius: 8px;
+}
+
+.add__textarea{
+    height: 160px;
+    resize: none;
+}

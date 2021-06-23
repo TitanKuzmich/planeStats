@@ -53,6 +53,7 @@
 }
 
 .info__button {
+  cursor: pointer;
   margin-top: 25px;
   display: block;
   text-decoration: none;
