@@ -1,4 +1,4 @@
-import "./HomeScreen.css";
+import "./CatalogScreen.css";
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 
@@ -7,7 +7,7 @@ import Plane from "../components/Plane";
 import AddPlane from "../components/AddPlane";
 
 //Actions
-import {filterPlanes, getPlanes as listPlanes} from "../redux/actions/planeActions";
+import {filterPlanes, getPlanes as listPlanes} from "../redux/dispatchers/planeActions";
 
 const CatalogScreen = () => {
     const dispatch = useDispatch();
@@ -26,10 +26,6 @@ const CatalogScreen = () => {
     return (
         <div className="homescreen">
             <h2 className="homescreen__title">Каталог самолетов</h2>
-            {/*<div className="header__wrapper">*/}
-            {/*    <div className="info__button" onClick={() => setSorting(1)}>Сначала дешевые</div>*/}
-            {/*    <div className="info__button" onClick={() => setSorting(-1)}>Сначала дорогие</div>*/}
-            {/*</div>*/}
             <div className="homescreen__products">
                 {loading ? (
                     <h2>Загрузка...</h2>

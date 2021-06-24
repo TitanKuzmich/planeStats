@@ -1,7 +1,7 @@
-import "./Product.css";
+import "./Plane.css";
 import {Link} from "react-router-dom";
 import {useDispatch} from "react-redux";
-import {removeFromCatalog} from "../redux/actions/planeActions";
+import {removeFromCatalog} from "../redux/dispatchers/planeActions";
 
 const Plane = ({imageUrl, description, name, productId}) => {
 

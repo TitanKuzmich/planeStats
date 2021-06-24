@@ -10,23 +10,10 @@ const getPlanes = async (req, res) => {
   }
 };
 
-const sortPlanes = async (req, res) => {
-  try {
-    const {sortType, field} = req.params
-
-    const planes = await Plane.find({}, {"sort": [`${field}`, sortType]})
-    res.json(planes);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "Server Error" });
-  }
-};
-
 const getPlaneById = async (req, res) => {
   try {
     const plane = await Plane.findById(req.params.id);
 
-    console.log(plane)
     res.json(plane);
   } catch (error) {
     console.error(error);
@@ -76,6 +63,5 @@ module.exports = {
   getPlaneById,
   addPlane,
   deletePlanes,
-  removePlaneById,
-  sortPlanes
+  removePlaneById
 };

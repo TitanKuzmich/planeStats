@@ -1,4 +1,4 @@
-import * as actionTypes from "../constants/planeConstants";
+import * as actionTypes from "../actions/planeConstants";
 
 export const getPlanesReducer = (state = { planes: [] }, action) => {
   switch (action.type) {

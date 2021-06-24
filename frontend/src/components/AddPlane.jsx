@@ -2,7 +2,7 @@ import React from "react";
 import {useState} from "react";
 import {useDispatch} from "react-redux";
 
-import {addPlane} from "../redux/actions/planeActions";
+import {addPlane} from "../redux/dispatchers/planeActions";
 
 import "./AddPlane.css";
 

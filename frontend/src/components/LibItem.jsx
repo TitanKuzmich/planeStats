@@ -1,17 +1,17 @@
-import "./CartItem.css";
+import "./LibItem.css";
 import { Link } from "react-router-dom";
 
-const LibItem = ({ item, qtyChangeHandler, removeHandler }) => {
+const LibItem = ({ item, removeHandler }) => {
   return (
-    <div className="cartitem">
-      <div className="cartitem__image">
+    <div className="lib__item">
+      <div className="lib__item__image">
         <img src={item.imageUrl} alt={item.name} />
       </div>
-      <Link to={`/planes/${item.plane}`} className="cartItem__name">
+      <Link to={`/planes/${item.plane}`} className="lib__item__name">
         <p>{item.name}</p>
       </Link>
       <button
-        className="cartItem__deleteBtn"
+        className="lib__item__delete"
         onClick={() => removeHandler(item.plane)}
       >
         <i className="fas fa-trash"></i>

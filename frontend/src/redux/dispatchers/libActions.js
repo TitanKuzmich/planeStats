@@ -1,4 +1,4 @@
-import * as actionTypes from "../constants/libConstants";
+import * as actionTypes from "../actions/libConstants";
 import axios from "axios";
 
 export const addToLib = (id, qty) => async (dispatch, getState) => {

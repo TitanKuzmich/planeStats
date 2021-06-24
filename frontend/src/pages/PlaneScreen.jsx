@@ -1,10 +1,8 @@
-import "./ProductScreen.css";
+import "./PlaneScreen.css";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-
-// Actions
-import { getPlaneDetails } from "../redux/actions/planeActions";
-import { addToLib } from "../redux/actions/libActions";
+import { getPlaneDetails } from "../redux/dispatchers/planeActions";
+import { addToLib } from "../redux/dispatchers/libActions";
 
 const PlaneScreen = ({ match, history }) => {
   const dispatch = useDispatch();
@@ -24,29 +22,30 @@ const PlaneScreen = ({ match, history }) => {
   };
 
   return (
-    <div className="productscreen">
+    <div className="plane__screen">
       {loading ? (
         <h2>Загрузка...</h2>
       ) : error ? (
         <h2>{error}</h2>
       ) : (
         <>
-          <div className="productscreen__left">
-            <div className="left__image">
-              <img src={plane && plane.imageUrl} alt={plane && plane.name} />
+          <div className="plane__container">
+            <div className="plane__image">
+              <img src={plane.imageUrl} alt={plane.name} />
             </div>
-            <div className="left__info">
-              <p className="left__name">Название: {plane && plane.name}</p>
-              <p>Описание: {plane && plane.description}</p>
-            </div>
-          </div>
-          <div className="productscreen__right">
-            <div className="right__info">
-              <p>
-                <button type="button" onClick={addToCartHandler}>
+            <div className="plane__info">
+              <div className="plane__info__header">
+                <p className="plane__name">Название: {plane.name}</p>
+
+                <div className="info__button plane__info_button" onClick={addToCartHandler}>
                   Добавить в свою библиотеку
-                </button>
-              </p>
+                </div>
+              </div>
+              <div className="plane__info__description">
+                <span className="plane__description__title">Описание:</span>
+
+                {plane.description}
+              </div>
             </div>
           </div>
         </>

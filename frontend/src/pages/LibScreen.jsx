@@ -1,21 +1,13 @@
-import "./CartScreen.css";
+import "./LibScreen.css";
 import {useSelector, useDispatch} from "react-redux";
 import {Link} from "react-router-dom";
-
-// Components
 import LibItem from "../components/LibItem";
-
-// Actions
-import {addToLib, removeFromLib, removeAllFromLib} from "../redux/actions/libActions";
+import {addToLib, removeFromLib, removeAllFromLib} from "../redux/dispatchers/libActions";
 
 const LibScreen = ({history}) => {
     const dispatch = useDispatch();
     const lib = useSelector((state) => state.lib);
     const {libItems} = lib;
-
-    const qtyChangeHandler = (id, qty) => {
-        dispatch(addToLib(id, qty));
-    };
 
     const removeFromLibHandler = (id) => {
         dispatch(removeFromLib(id));
@@ -32,32 +24,33 @@ const LibScreen = ({history}) => {
 
     return (
         <>
-            <div className="cartscreen">
-                <div className="cartscreen__left">
+            <div className="lib__screen">
+                <div className="lib__content">
                     <h2>Библиотека</h2>
 
                     {libItems.length === 0 ? (
-                        <div>
+                        <h2>
                             В вашей библиотеке еще нет моделей самолетов. <Link to="/">Вернуться на главную</Link>
-                        </div>
+                        </h2>
                     ) : (
-                        libItems.map((item) => (
-                            <LibItem
-                                key={item.product}
-                                item={item}
-                                qtyChangeHandler={qtyChangeHandler}
-                                removeHandler={removeFromLibHandler}
-                            />
-                        ))
+                        <div className="lib__content__container">
+                            {libItems.map((item) => (
+                                <LibItem
+                                    key={item.product}
+                                    item={item}
+                                    removeHandler={removeFromLibHandler}
+                                />
+                            ))}
+                        </div>
                     )}
                 </div>
 
-                <div className="cartscreen__right">
-                    <div className="cartscreen__info">
+                <div className="lib__stats">
+                    <div className="lib__stats__count">
                         <p>Всего моделей в библиотеке {getLibCount()} шт</p>
                     </div>
                     <div>
-                        <button onClick={onRemoveAllHandle}>Удалить все модели</button>
+                        <div className="info__button lib__info__button" onClick={onRemoveAllHandle}>Удалить все модели</div>
                     </div>
                 </div>
             </div>

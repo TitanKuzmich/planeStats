@@ -1,0 +1,61 @@
+.plane__screen{
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 35px 0;
+}
+
+.plane__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plane__image{
+  max-width: 600px;
+  width: 100%;
+}
+
+.plane__image img{
+  border-radius: 8px;
+}
+
+.plane__info{
+  max-width: 600px;
+  width: 100%;
+  margin-top: 35px;
+}
+
+.plane__info__header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.plane__name{
+  color: #f4f4f4;
+  font-size: 29px;
+  background-color: rgb(83, 116, 199);
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.plane__info_button{
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.plane__info__description{
+  margin-top: 25px;
+  color: #f4f4f4;
+  font-size: 20px;
+  background-color: rgb(83, 116, 199);
+  padding: 15px 20px;
+  border-radius: 8px;
+}
+
+.plane__description__title{
+  font-size: 29px;
+  display: block;
+  margin-bottom: 10px;
+}

@@ -1,4 +1,4 @@
-import * as actionTypes from "../constants/planeConstants";
+import * as actionTypes from "../actions/planeConstants";
 import axios from "axios";
 
 export const addPlane = (newItem) => async (dispatch) => {

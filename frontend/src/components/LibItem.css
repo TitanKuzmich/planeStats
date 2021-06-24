@@ -1,0 +1,47 @@
+.lib__item {
+  display: flex;
+  align-items: center;
+  color: #f4f4f4;
+  padding: 30px 25px;
+  background-color: rgba(83, 116, 193, 0.77);
+  border: 1px solid #f4f4f4;
+  border-radius: 8px;
+}
+
+.lib__item__image{
+  width: 100px;
+  border-radius: 18px;
+}
+
+.lib__item__name {
+  font-size: 46px;
+  margin: 0 20px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  border-bottom: 1px solid transparent;
+  color: #f4f4f4;
+  transition: all .3s ease-in-out;
+}
+
+.lib__item__name:hover {
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.lib__item__delete {
+  text-align: center;
+  color: #f4f4f4;
+  font-size: 24px;
+  padding: 10px 15px;
+  background-color: #5374C1;
+  border: 1px solid #f4f4f4;
+  border-radius: 30%;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+.lib__item__delete:hover {
+  background-color: #f4f4f4;
+  color: #5374C1;
+  border: 1px solid #5374C1;
+  transform: scale(1.2);
+}

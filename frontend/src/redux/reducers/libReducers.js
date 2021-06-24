@@ -1,4 +1,4 @@
-import * as actionTypes from "../constants/libConstants";
+import * as actionTypes from "../actions/libConstants";
 
 const LIB_INITIAL_STATE = {
   libItems: [],
