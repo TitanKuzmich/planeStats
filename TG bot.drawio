@@ -1,1 +1,19 @@
-<mxfile host="app.diagrams.net" modified="2021-07-01T08:57:55.663Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" version="14.8.2" etag="4xaaKV7abRJ4EoBmDmAt" type="github"><diagram id="2JlSJU5_JV4PX27yQQXT">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-07-01T09:08:05.479Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="aMyCz8_TbBbBibXedVBY" version="14.8.2" type="github">
+  <diagram id="2JlSJU5_JV4PX27yQQXT" name="Page-1">
+    <mxGraphModel dx="2852" dy="1172" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bYdds7if1w0mErr0JuUY-1" value="User Comands" style="swimlane;" vertex="1" parent="1">
+          <mxGeometry x="-440" y="120" width="340" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="bYdds7if1w0mErr0JuUY-2" value="1) &lt;b&gt;start&lt;/b&gt; - starts the bot&lt;br&gt;&lt;div&gt;2) &lt;b&gt;promote video&lt;/b&gt; - in answer you&#39;ll receive message&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span&gt;with 3 vids or form for your vid (name, descr, link)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;3) &lt;b&gt;get VIP&lt;/b&gt;&amp;nbsp;- make a payment in order not to&amp;nbsp;&lt;/div&gt;&lt;div&gt;watch vids for your promotion&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="bYdds7if1w0mErr0JuUY-1">
+          <mxGeometry x="10" y="30" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bYdds7if1w0mErr0JuUY-3" value="Admin Comands" style="swimlane;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="120" width="290" height="200" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
